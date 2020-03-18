@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>pro05</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+
+	<servlet>
+<!-- 		실제 경로와 가짜주소 경로를 매핑시킬 이름  -->
+		<servlet-name>aaa</servlet-name>
+		<!-- 실제 요청할 패키지명을 포함한 서블릿 클래스 경로 작성 -->
+		<servlet-class>sec01.ex01.FirstServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<!-- 		실제 경로와 가짜주소 경로를 매핑시킬 이름  -->
+		<servlet-name>aaa</servlet-name>
+		<!-- 웹브라우저 주소창에 입력할 서블릿의 가짜주소 작성 -->
+		<url-pattern>/first</url-pattern>
+
+	</servlet-mapping>
+<!-- 	클라이언트가 웹브라우저 주소창에 입력할 요청 주소  -->
+<!-- 	http://localhost:8080/pro05/first -->
+</web-app>
